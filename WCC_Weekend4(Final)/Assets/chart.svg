@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="206" height="164" viewBox="0 0 206 164">
+  <g id="chart" transform="translate(-874 -306)">
+    <path id="Rectangle_11" data-name="Rectangle 11" d="M15,0H191a15,15,0,0,1,15,15V164a0,0,0,0,1,0,0H15A15,15,0,0,1,0,149V15A15,15,0,0,1,15,0Z" transform="translate(874 306)" fill="#eb1974"/>
+    <g id="graph" transform="translate(-4 -2)">
+      <g id="nbr">
+        <text id="_005" data-name="005" transform="translate(899 341)" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Montserrat" font-weight="600"><tspan x="0" y="0">005</tspan></text>
+        <text id="_004" data-name="004" transform="translate(899 360)" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Montserrat" font-weight="600"><tspan x="0" y="0">004</tspan></text>
+        <text id="_003" data-name="003" transform="translate(899 379)" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Montserrat" font-weight="600"><tspan x="0" y="0">003</tspan></text>
+        <text id="_002" data-name="002" transform="translate(899 398)" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Montserrat" font-weight="600"><tspan x="0" y="0">002</tspan></text>
+        <text id="_001" data-name="001" transform="translate(899 417)" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Montserrat" font-weight="600"><tspan x="0" y="0">001</tspan></text>
+      </g>
+      <g id="ligne" transform="translate(0 0.5)">
+        <line id="Ligne_1" data-name="Ligne 1" x2="137" transform="translate(925.5 337.5)" fill="none" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-width="1"/>
+        <line id="Ligne_1-2" data-name="Ligne 1" x2="137" transform="translate(925.5 356.5)" fill="none" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-width="1"/>
+        <line id="Ligne_1-3" data-name="Ligne 1" x2="137" transform="translate(925.5 375.5)" fill="none" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-width="1"/>
+        <line id="Ligne_1-4" data-name="Ligne 1" x2="137" transform="translate(925.5 394.5)" fill="none" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-width="1"/>
+        <line id="Ligne_1-5" data-name="Ligne 1" x2="137" transform="translate(925.5 413.5)" fill="none" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-width="1"/>
+      </g>
+      <g id="bar">
+        <path id="Rectangle_12" data-name="Rectangle 12" d="M4,0h7a4,4,0,0,1,4,4V61a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" transform="translate(934 353)" fill="#fff"/>
+        <path id="Rectangle_12-2" data-name="Rectangle 12" d="M4,0h7a4,4,0,0,1,4,4V72a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" transform="translate(957 342)" fill="#fff"/>
+        <path id="Rectangle_12-3" data-name="Rectangle 12" d="M4,0h7a4,4,0,0,1,4,4V46a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" transform="translate(980 368)" fill="#fff"/>
+        <path id="Rectangle_12-4" data-name="Rectangle 12" d="M4,0h7a4,4,0,0,1,4,4V76a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" transform="translate(1003 338)" fill="#fff"/>
+        <path id="Rectangle_12-5" data-name="Rectangle 12" d="M4,0h7a4,4,0,0,1,4,4V66a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" transform="translate(1026 348)" fill="#fff"/>
+      </g>
+      <g id="legend">
+        <path id="Tracé_9" data-name="Tracé 9" d="M4,0H52c2.209,0,4,1.321,4,2.951V5.165c0,1.63-1.791,2.951-4,2.951H4c-2.209,0-4-1.321-4-2.951V2.951C0,1.321,1.791,0,4,0Z" transform="translate(927 430)" fill="rgba(255,255,255,0.6)"/>
+        <path id="Tracé_11" data-name="Tracé 11" d="M4,0H52c2.209,0,4,1.321,4,2.951V5.165c0,1.63-1.791,2.951-4,2.951H4c-2.209,0-4-1.321-4-2.951V2.951C0,1.321,1.791,0,4,0Z" transform="translate(1005 430)" fill="rgba(255,255,255,0.6)"/>
+        <path id="Tracé_10" data-name="Tracé 10" d="M2.363,0H30.725a2.5,2.5,0,0,1,2.363,2.617V4.58A2.5,2.5,0,0,1,30.725,7.2H2.363A2.5,2.5,0,0,1,0,4.58V2.617A2.5,2.5,0,0,1,2.363,0Z" transform="translate(927 442)" fill="rgba(255,255,255,0.6)"/>
+        <path id="Tracé_12" data-name="Tracé 12" d="M2.363,0H30.725a2.5,2.5,0,0,1,2.363,2.617V4.58A2.5,2.5,0,0,1,30.725,7.2H2.363A2.5,2.5,0,0,1,0,4.58V2.617A2.5,2.5,0,0,1,2.363,0Z" transform="translate(1005 442)" fill="rgba(255,255,255,0.6)"/>
+      </g>
+    </g>
+  </g>
+</svg>

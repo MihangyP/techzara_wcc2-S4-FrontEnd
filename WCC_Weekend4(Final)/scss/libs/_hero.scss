@@ -1,0 +1,326 @@
+.hero {
+    @extend %flex;
+    justify-content: center;
+    transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    position: relative;
+    &.active {
+        opacity: 0;
+        transform: scale(0);
+    }
+    .profil2 {
+        position: absolute;
+        top: 20%;
+        left: 0;
+    }
+    .profil2 img{
+        height: 100px;
+    }
+    .hero-picture {
+        position: relative;
+        // background: green;
+        [alt=elipse] {
+            position: absolute;
+            height: 200px;
+            left: 0;
+            top: -10px;
+        }
+        
+        [alt=portrait] {
+            height: 570px;
+            @media(max-width: 900px){
+                height: 500px;
+            }
+        }
+        
+        [alt=phone] {
+            height: 50px;
+            position: absolute;
+            bottom: 12%;
+            right: 50%;
+            transform: translateX(50%);
+            cursor: pointer;
+            &:hover {
+                animation: bring .1s infinite alternate; 
+            }
+        }
+
+        @keyframes bring {
+          to {
+            transform: translateX(50%) rotate(20deg);
+          }
+        }
+
+        .profil-description {
+            position: absolute;
+            text-align: center;
+            color: $white;
+            bottom: 25%;
+            right: 50%;
+            transform: translateX(50%);
+            h3 {
+                color: #fff;
+            }
+        }
+        .msg {
+            background: #fff;
+            width: fit-content;
+            padding: 1em;
+            border-radius: 15px 15px 15px 0;
+            position: absolute;
+            top: 55%;
+            right: -50px;
+            font-size: .8em;
+            @media (max-width: 900px) {
+             top: 103%;
+             right: 5%;
+            }
+        }
+        .msg2 {
+            position: absolute;
+            background: $violetRed;
+            color: #fff;
+            padding: 1em;
+            border-radius: 15px 15px 0 15px;
+            right: -108px;
+            bottom: 27%;
+            font-size: .8em;
+            @media (max-width: 900px) {
+                top: 95%;
+                right: 10%;
+            }
+        }
+        .card {
+            width: 150px;
+            height: 190px;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            position: absolute;
+            top: 57%;
+            left: -45px;
+            box-shadow: 35px 35px 35px rgba(0, 0, 0, 0.147);
+            @media (max-width: 900px) {
+                width: 100px;
+                height: 140px;
+                left: 15px;
+                top: 50%;
+
+                p {
+                    font-size: 12px;
+                }
+            }
+            .card-content {
+                height: calc(100% - 40px);
+                @extend %flex;
+                flex-direction: column;
+                // gap: 1em;
+                & > img {
+                    height: 100px;
+                    // aspect-ratio: 1;
+                    // border-radius: 50%;
+                    // background: $violetRed;
+                    // margin-top: 1em;
+                    @media (max-width: 900px) {
+                     height: 60px;
+                    }
+                }
+                .card-name {
+                    text-align: center;
+                    h3 {
+                        color: $violetBlack;
+                    }
+                    p {
+                        font-size: .8em;
+                    }
+                    @media (max-width: 900px) {
+                        h3 {
+                            font-size: 15px;
+                        }
+                        p {
+                            font-size: .6em;
+                        }
+                    }
+                }
+            }
+            .card-description {
+                height: 40px;
+                width: 100%;
+                background: $white;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                @extend %flex;
+                & > div {
+                    width: 50%;
+                    height: 100%;
+                    @extend %flex;
+                    justify-content: center;
+                    &:first-child {
+                        border-right: 1px solid rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+
+            &.jane {
+                top: 12%;
+                left: 320px;
+                .card-content img {
+                    height: 60px;
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                }
+                @media (max-width: 900px) {
+                    left: 250px;
+                }
+                .card-description {
+                    background: rgba(0, 0, 0, 0.099);
+                    justify-content: center;
+                    flex-direction: column;
+                    img {
+                        height: 20px;
+                        @media (max-width: 900px) {
+                            height: 15px;
+                        }
+                    }
+                    p {
+                        font-size: .8em;
+                        @media (max-width: 900px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.point {
+    width: 10px;
+    aspect-ratio: 1;
+    background: $violetRed;
+    border-radius: 50%;
+    position: relative;
+    &:first-child {
+        background: $yellowRed;
+        bottom: 190px;
+        right: 50px;
+    }
+    &:nth-child(2) {
+        background: $yellowRed;
+        left: 185px;
+        top: 220px;
+    }
+    &:nth-child(3) {
+        width: 8px;
+        background: $violetRed;
+        left: 280px;
+        top: 250px;
+    }
+
+    @keyframes toViolet {
+        to {
+            background: $violetRed;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+//grap
+.graphique {
+    position: absolute;
+    left: 409px;
+    top: 435px;
+    display: flex;
+    flex-direction: column;
+    background: #EB1974;
+    padding: 0.6em;
+    border-radius: 15px 15px 0 15px;
+    width: 125px;
+    @media (max-width: 900px) {
+        left: 10%;
+        top: 90%;
+    }
+}
+
+#barre1 {
+    animation: barheight 3s infinite;
+}
+
+@keyframes barheight {
+    0%{
+        transform: translate(934px, 355px);
+    }
+    50%{
+        transform: translate(934px, 393px);
+    }
+    100%{
+        transform: translate(934px, 355px);
+    }
+}
+
+#barre2{
+    animation: barheight1 3.5s infinite;
+}
+
+@keyframes barheight1 {
+    0%{
+        transform: translate(957px, 345px);
+    }
+    50%{
+        transform: translate(957px, 380px);
+    }
+    100%{
+        transform: translate(957px, 345px);
+    }
+}
+#barre3 {
+    animation: barheight2 3.6s infinite;
+}
+@keyframes barheight2 {
+    0%{
+        transform: translate(980px, 370px);
+    }
+    50%{
+        transform: translate(980px, 395px);
+    }
+    100%{
+        transform: translate(980px, 370px);
+    }
+}
+#barre4 {
+    animation: barheight3 3.7s infinite;
+}
+@keyframes barheight3 {
+    0%{
+        transform: translate(1003px, 340px);
+    }
+    50%{
+        transform: translate(1003px, 390px);
+    }
+    100%{
+        transform: translate(1003px, 340px);
+    }
+}
+#barre5 {
+    animation: barheight4 3.8s infinite;
+}
+@keyframes barheight4 {
+    0%{
+        transform: translate(1026px, 348px);
+    }
+    50%{
+        transform: translate(1026px, 390px);
+    }
+    100%{
+        transform: translate(1026px, 348px);
+    }
+}
+
+#progress1 {
+    overflow: hidden;
+}

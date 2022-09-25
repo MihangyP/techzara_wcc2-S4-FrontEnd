@@ -1,0 +1,191 @@
+header {
+    padding: 1em 4em;
+    @extend %flex;
+    justify-content: space-between;
+    // background: $white;
+    z-index: 10000;
+
+    .logo img {
+        height: 0.8em
+    }
+    
+     @media (max-width: 900px) {
+        padding-inline: 1em;
+     }
+
+    nav {
+      @extend %flex;
+      gap: 2em;
+      color: #000;
+      transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      a {
+        color: inherit;
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        font-size: .9em;
+
+        &:not(.login)::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: $violetRed;
+            bottom: -10px;
+            transform-origin: 100% 0;
+            transform: scaleX(0);
+            transition: transform .4s ease-out;
+        }
+
+        &:not(.login).active::before {
+            transform: scaleX(1);
+        }
+
+        &:not(.login):hover::before {
+            transform-origin: 0 0;
+            transform: scaleX(1);
+        }
+
+        &.login {
+            margin-left: 1em;
+            border: 1px solid $violetRed;
+            border-radius: 15px;
+
+            overflow: hidden;
+            position: relative;
+            padding: 15px 45px;
+            border-radius: 15px;
+            transition: all .25s ease-out;
+            &:hover .hoverLogin {
+                transform: scale(10);
+            }
+            &:hover {
+                color: #fff;
+            }
+        }
+      }
+
+      &.active {
+        width: 100vw;
+        opacity: 1;
+      }
+
+      @media (max-width: 800px) {
+           position: fixed;
+           top: 0;
+           left: 0;
+           height: 100vh;
+           width: 0;
+           opacity: 0;
+           margin-top: 2em;
+           justify-content: center;
+           flex-direction: column; 
+           z-index: 1010;
+
+           a {
+            color: $white;
+            font-weight: bold;
+            font-size: 1.1em;
+            &:not(.login)::before {
+                background: $white;
+            }
+            &.login {
+                border-color: $white;
+                margin-top: 40px;
+                .hoverLogin {
+                    background: $white;
+                }
+
+                &:hover {
+                    color: $violetBlack;
+                }
+                
+            }
+           }
+    }
+
+    }
+
+    @media (max-width: 800px) {
+        position: fixed;
+        width: 90%;
+        padding-top: 2em;
+        .burger-nav {
+            width: 25px;
+            height: 25px;
+            position: relative;
+            cursor: pointer;
+            z-index: 1100;
+            span {
+                width: 100%;
+                height: 5px;
+                background: #000;
+                position: absolute;
+                transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                &:nth-child(2) {
+                    margin-top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:nth-child(3) {
+                    margin-top: 100%;
+                    transform: translateY(-100%);
+                }
+            }
+
+            &.active {
+                span:nth-child(1) {
+                    margin-top: 50%;
+                    transform: translateY(-50%);
+                     transform: rotate(45deg);
+                }
+                span:nth-child(2) {
+                    height: 0;
+                    opacity: 0;
+                }
+                span:nth-child(3) {
+                    margin-top: 50%;
+                    transform: translateY(-50%);
+                     transform: rotate(-45deg);
+                    //  margin-bottom: 50%;
+                }
+            }
+        }
+
+        .nav-bg {
+            height: 2rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            position: fixed;
+            top: -2rem;
+            right: -2rem;
+            background-image: radial-gradient($violetRed, $violetBlack);
+            z-index: 1000;
+            transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &.active {
+                transform: scale(80);
+            }
+            &.active .burger-nav{
+                transform: scale(1);
+            } 
+        }
+    }
+}
+
+
+.hoverLogin {
+    background: $violetRed;
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: -2;
+    transition: all .25s ease-out;
+}

@@ -1,0 +1,110 @@
+.accueil {
+   margin-top: 3em;
+   transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+   position: relative;
+   & > .profil1 {
+      position: absolute;
+      left: 60px;
+      top: 9px;
+      img {
+         height: 100px;
+      }
+   }
+   h1 {
+      margin-top: 1.8em;
+   }
+   p {
+      margin-block: 2em 3em;
+   }
+   &.active {
+      opacity: 0;
+      transform: scale(0);
+   }
+   .btn {
+      @extend %flex;
+      gap: 2em;
+      button {
+         @extend %flex;
+         gap: 1em;
+         justify-content: center;
+         width: 180px;
+         min-width: 120px;
+         height: 60px;
+         padding: 0 1em;
+         border-radius: 15px;
+         border: none;
+         outline: none;
+         font-family: "Montserra-S";
+         font-size: clamp(14px, 0.8vw, 20px);
+         color: $violetBlack;
+         background: none;
+         cursor: pointer;
+
+         &:nth-child(1){
+         background: linear-gradient(to right,$violetRed, $yellowOrange);
+         color: $white;
+         // animation: rotation .8s infinite alternate;
+         }
+
+         // @keyframes rotation {
+         //    0% {
+         //       background: linear-gradient(to right,$violetRed, $yellowOrange);
+         //    }
+         //    10% {
+         //       background: linear-gradient(190deg,$violetRed, $yellowOrange);
+         //    }
+         //    20% {
+         //       background: linear-gradient(200deg,$violetRed, $yellowOrange);
+         //    }
+         //    30% {
+         //       background: linear-gradient(210deg,$violetRed, $yellowOrange);
+         //    }
+         //    40% {
+         //       background: linear-gradient(220deg,$violetRed, $yellowOrange);
+         //    }
+         //    50% {
+         //       background: linear-gradient(230deg,$violetRed, $yellowOrange);
+         //    }
+         //    60% {
+         //       background: linear-gradient(240deg,$violetRed, $yellowOrange);
+         //    }
+         //    70% {
+         //       background: linear-gradient(250deg,$violetRed, $yellowOrange);
+         //    }
+         //    80% {
+         //       background: linear-gradient(260deg,$violetRed, $yellowOrange);
+         //    }
+         //    90% {
+         //       background: linear-gradient(270deg,$violetRed, $yellowOrange);
+         //    }
+         //    100% {
+         //       background: linear-gradient(280deg,$violetRed, $yellowOrange);
+         //    }
+         // }
+
+         &:nth-child(2){
+            border: 1px solid $violetRed;
+            color: $violetBlack;
+            position: relative;
+            overflow: hidden;
+            transition: transform .25s ease-out;
+           
+            #play {
+               fill: $violetRed;
+               transition: all .25s ease-out;
+            }
+            &:hover {
+               color: $white;
+            }
+            
+            &:hover .hoverLogin {
+               transform: scale(10);
+           }
+
+           &:hover #play {
+            fill: $white;
+           }
+         }   
+      }
+   }
+}
